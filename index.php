@@ -77,7 +77,7 @@
             <article class="parrafo">
                 <?php echo $rowtema['cont_tema']; ?>
             </article>
-            <a href="participar.php?cod_tema=<?php echo$rowtema['cod_tema'];?>">Ver más</a>
+            <a href="descripcion_curso.php?cod_tema=<?php echo$rowtema['cod_tema'];?>">Ver más</a>
             <a href="participar.php?cod_tema=<?php echo$rowtema['cod_tema'];?>">Comprar</a>
         </div>
 

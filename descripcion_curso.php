@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>Software</title>
 		<link rel="stylesheet" type="text/css" href="css/estilos.css">
+		<link rel="shortcut icon" href="imagenes/prueba.ico">
 	</head>
 	<body>
 		<header>
@@ -25,15 +26,14 @@
 				$resultadostema=$conexion->query($tema);
 				$rowtema=$resultadostema -> fetch_assoc();	
 		?>		
-		<div class="temas">	
+		<div class="cursos">	
 			<div class="temas_titulo">
-				<h1><?php echo $rowtema['titu_tema'];?></h1>
+				<p id="titulo_detalle"><?php echo $rowtema['titu_tema'];?></p>
 			</div>
-			<img src="imagenes_usu/temas/<?php  echo $rowtema['img_tema'];?>" id="img"><br>
+			<img src="imagenes_usu/temas/<?php  echo $rowtema['img_tema'];?>" id="img_detalle"><br>
 			<article class="parrafo">
 				<?php echo $rowtema['cont_tema']; ?>
 			</article>
-			<a href="login.php?cod_tema=<?php echo$cod_tema;?>">Participar</a>
 		</div>
 			<!--<div class="tabla">
 				
