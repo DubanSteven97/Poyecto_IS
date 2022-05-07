@@ -1,0 +1,279 @@
+/*****************************
+* colores utilizados:        *
+* #EEEEEE = gris fondo       *
+* #00ADB5 = azul             *
+* #393E46 = gris medio claro *
+* #222831 = negro            *
+******************************/
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background:#EEEEEE;
+}
+.formulario{
+	height: 35px;
+	background:#222831;
+	padding:10px;
+	margin-bottom:3%;
+}
+#txt1{
+	padding: 5px;
+	border-radius: 5px;
+	float:left;
+	margin: 0% 0% 0% 45%;
+}
+#txt{
+	margin-left:10px;
+	padding: 5px;
+	border-radius: 5px;
+	float:left;
+}
+
+#btn{
+	margin-left:1%;
+	background: #00ADB5;
+	border:none;
+	float:left;
+	border-radius: 5px;
+	padding: 7px;
+	color: #fff;
+}
+#btn-2{
+	margin-right:1%;
+	background: #00ADB5;
+	border:none;
+	float:left;
+	border-radius: 5px;
+	padding: 7px;
+	color: #fff;
+	margin-left:70%;
+}
+#btn-4{
+	margin-right:1%;
+	background: #00ADB5;
+	border:none;
+	float:left;
+	border-radius: 5px;
+	padding: 7px;
+	color: #fff;
+}
+.titulo{
+	color:#EEEEEE;
+	float:left;
+	font-weight: 700;
+	margin-left:5%;
+}
+footer{
+	text-align:center;
+	padding:10px;
+	color:white;
+	background:#00ADB5;
+	margin-bottom:0px;
+    position:block;
+    bottom: 0;
+    z-index: 100;
+    left: 0;
+}
+.parrafo{
+	position:block;
+	text-align:justify;
+	width:81%;
+	margin: 0% 0% 0% 5%;
+	padding:10px;
+}
+h1{
+	color:#00ADB5;
+	position:block;
+	text-align:justify;
+	width:70%;
+	margin: 0% 0% 0% 0%;
+	padding:10px;
+}
+
+/************
+*   tabla   *
+************/
+.main .tabla table{
+	position:block;
+	text-align:justify;
+	width:80%;
+	padding:10px;
+	margin: 0% 0% 3% 10%;
+}
+.main .tabla table tr td{
+	padding:10px;
+}
+.main .tabla table #titu{
+	color:#00ADB5;
+	float:left;
+	font-size:30px;
+	font-weight: 700;
+}
+
+.main .tabla table #titu{
+	float:left;
+	font-size:30px;
+	font-weight: 700;
+}
+
+.main .tabla table #fecha{
+	font-weight: 700;
+}
+
+.main .tabla table #contenido{
+	width:60%;
+	font-weight: 700;
+	text-align:justify;
+}
+
+.main .tabla table #tamaño{
+	width:50%;
+}
+
+#publicar{
+	width:90%;
+	background: #00ADB5;
+	border:none;
+	border-radius: 5px;
+	padding: 10px;
+	color: #fff;
+	margin:0% 0% 0% 3%;
+}
+
+.main .temas{
+	margin: 0% 0% 0% 0%;
+	padding:10px;
+}
+
+.main .temas #campo_3{
+	width:37%;
+	margin:10px;
+	background:#fff;
+	border:solid 2px #00ADB5;
+	padding:10px;
+	border-radius:5px;
+	widows:10%;
+	color:#00ADB5;
+	font-weight: 600;
+	resize: none;
+}
+.main .temas #campo_2{
+	width:49%;
+	margin:10px;
+	background:#fff;
+	border:solid 2px #00ADB5;
+	padding:10px;
+	border-radius:5px;
+	widows:10%;
+	color:#00ADB5;
+	font-weight: 600;
+	resize: none;
+}
+.main .temas #campo_1{
+	width:93%;
+	margin:10px;
+	background:#fff;
+	border:solid 2px #00ADB5;
+	padding:10px;
+	border-radius:5px;
+	widows:10%;
+	color:#00ADB5;
+	font-weight: 600;
+}
+
+.main .caja_2{
+	margin: 0% 10% 0% 30%;
+	padding:10px;
+}
+
+.main .caja_2 #campo_1{
+	width:60%;
+	margin:10px;
+	background:#EEEEEE;
+	border:solid 2px #00ADB5;
+	padding:10px;
+	border-radius:5px;
+	widows:10%;
+	color:#00ADB5;
+	font-weight: 600;
+	resize: none;
+}
+#registro{
+	width:95%;
+	background: #00ADB5;
+	border:none;
+	border-radius: 5px;
+	padding: 10px;
+	color: #fff;
+	margin: 0% 0% 0% 1%;
+}
+
+.main .tabla table #btn-3 a{
+	width:60%;
+	margin:0% 0% 0% 10%;
+	background: #00ADB5;
+	border:none;
+	border-radius: 5px;
+	padding:7px;
+	color: #fff;
+	display: block;
+	text-decoration:none;
+}
+.main .tabla table #btn-3 a:hover{
+	background:#fff;
+	color: #00ADB5;
+	border:solid 2px #00ADB5;
+	display: block;
+}
+
+a{
+	width:30%;
+	text-align:justify;
+	margin-right:1%;
+	background: #00ADB5;
+	border:none;
+	border-radius: 5px;
+	padding: 7px;
+	color: #fff;
+	display: block;
+	text-decoration:none;
+	margin: 0% 0% 2% 5%;
+	display: inline-block;
+	text-align: left;	
+}
+a:hover{
+	text-align:center;
+	background:#fff;
+	color: #00ADB5;
+	border:solid 2px #00ADB5;
+	display: block;
+	display: inline-block;
+	text-align: left;		
+}
+.main .temas{
+	background:#fff;
+	border:solid 1px #fff;
+	width:300px;
+	height: 300px;
+	margin: 0px 0px 2% 2%;
+	position:block;
+	-webkit-box-shadow: 10px 10px 35px 0px black;
+	-moz-box-shadow: 10px 10px 35px 0px black;
+	box-shadow: 10px 10px 35px 0px black;
+	display: inline-block;
+	text-align: left;	
+}
+.main .temas .temas_titulo{
+	background:#fff;
+	margin:3% 0% 0% 0%;
+	position:absolute;
+	opacity:0.8;
+}
+
+.main #img{
+	width:300px;
+	height: 200px;
+}
+
