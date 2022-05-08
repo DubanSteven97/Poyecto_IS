@@ -65,20 +65,20 @@
     <section class="main">
         <?php
 			include('php/conexion.php');
-				$tema="SELECT * FROM tema";
+				$tema="SELECT * FROM curso";
 				$resultadostema=$conexion->query($tema);
 			while ($rowtema=$resultadostema -> fetch_assoc()){				
 		?>
         <div class="temas">
             <div class="temas_titulo">
-                <h1><?php echo $rowtema['titu_tema']; ?></h1>
+                <h1><?php echo $rowtema['titu_curso']; ?></h1>
             </div>
-            <img src="imagenes_usu/temas/<?php  echo $rowtema['img_tema'];?>" id="img"><br>
+            <img src="imagenes_usu/cursos/<?php  echo $rowtema['img_curso'];?>" id="img"><br>
             <article class="parrafo">
-                <?php echo $rowtema['cont_tema']; ?>
+                <?php echo $rowtema['cont_curso']; ?>
             </article>
-            <a href="descripcion_curso.php?cod_tema=<?php echo$rowtema['cod_tema'];?>">Ver más</a>
-            <a href="participar.php?cod_tema=<?php echo$rowtema['cod_tema'];?>">Comprar</a>
+            <a href="descripcion_curso.php?cod_curso=<?php echo$rowtema['cod_curso'];?>">Ver más</a>
+   
         </div>
 
         <?php 

@@ -95,51 +95,52 @@ h1{
 /************
 *   tabla   *
 ************/
-.main .tabla table{
+.tabla table{
 	position:block;
+	background:#fff;		
 	text-align:justify;
 	width:80%;
 	padding:10px;
-	margin: 0% 0% 3% 10%;
+	margin: 5% 0% 3% 10%;
 }
-.main .tabla table tr td{
+.tabla table tr td{
 	padding:10px;
 }
-.main .tabla table #titu{
+.tabla table #titu{
 	color:#00ADB5;
 	float:left;
 	font-size:30px;
 	font-weight: 700;
 }
 
-.main .tabla table #titu{
+.tabla table #titu{
 	float:left;
 	font-size:30px;
 	font-weight: 700;
 }
 
-.main .tabla table #fecha{
+.tabla table #fecha{
 	font-weight: 700;
 }
 
-.main .tabla table #contenido{
+.tabla table #contenido{
 	width:60%;
 	font-weight: 700;
 	text-align:justify;
 }
 
-.main .tabla table #tamaño{
+.tabla table #tamaño{
 	width:50%;
 }
 
 #publicar{
-	width:90%;
+	width:97%;
 	background: #00ADB5;
 	border:none;
 	border-radius: 5px;
 	padding: 10px;
 	color: #fff;
-	margin:0% 0% 0% 3%;
+	margin:0% 0% 3% 1%;
 }
 
 .main .temas{
@@ -229,7 +230,7 @@ h1{
 }
 
 a{
-	width:30%;
+	width:90%;
 	text-align:justify;
 	margin-right:1%;
 	background: #00ADB5;
@@ -241,7 +242,7 @@ a{
 	text-decoration:none;
 	margin: 0% 0% 2% 5%;
 	display: inline-block;
-	text-align: left;	
+	text-align: center;	
 }
 a:hover{
 	text-align:center;
@@ -250,7 +251,7 @@ a:hover{
 	border:solid 2px #00ADB5;
 	display: block;
 	display: inline-block;
-	text-align: left;		
+	text-align: center;			
 }
 
 .main .cursos{
@@ -290,7 +291,7 @@ a:hover{
 	background:#fff;
 	border:solid 1px #fff;
 	width:300px;
-	height: 300px;
+	height: 50%;
 	margin: 0px 0px 2% 2%;
 	position:block;
 	-webkit-box-shadow: 10px 10px 35px 0px black;
@@ -311,3 +312,102 @@ a:hover{
 	height: 200px;
 }
 
+.main .login{
+	background:#fff;
+	border:solid 1px #fff;
+	width:50%;
+	height: 35%;
+	margin: 5% 0% 0% 25%;
+	position:block;
+	-webkit-box-shadow: 10px 10px 35px 0px black;
+	-moz-box-shadow: 10px 10px 35px 0px black;
+	box-shadow: 10px 10px 35px 0px black;
+	display: inline-block;
+	text-align: left;	
+}
+
+
+.main .login #campo_3{
+	width:37%;
+	margin:10px;
+	background:#fff;
+	border:solid 2px #00ADB5;
+	padding:10px;
+	border-radius:5px;
+	widows:10%;
+	color:#00ADB5;
+	font-weight: 600;
+	resize: none;
+}
+.main .login #campo_2{
+	width:49%;
+	margin:10px;
+	background:#fff;
+	border:solid 2px #00ADB5;
+	padding:10px;
+	border-radius:5px;
+	widows:10%;
+	color:#00ADB5;
+	font-weight: 600;
+	resize: none;
+}
+.main .login #campo_1{
+	width:95%;
+	margin:10px;
+	background:#fff;
+	border:solid 2px #00ADB5;
+	padding:10px;
+	border-radius:5px;
+	widows:10%;
+	color:#00ADB5;
+	font-weight: 600;
+}
+
+
+.cargar_curso{
+	background:#fff;
+	border:solid 1px #fff;
+	width:90%;
+	margin: 0% 0% 0% 5%;
+	position:block;
+	-webkit-box-shadow: 10px 10px 35px 0px black;
+	-moz-box-shadow: 10px 10px 35px 0px black;
+	box-shadow: 10px 10px 35px 0px black;
+	display: inline-block;
+	text-align: left;	
+}
+
+.cargar_curso #campo_3{
+	width:37%;
+	margin:10px;
+	background:#fff;
+	border:solid 0px #00ADB5;
+	padding:10px;
+	widows:10%;
+	color:#00ADB5;
+	font-weight: 600;
+	resize: none;
+}
+.cargar_curso #campo_2{
+	width:95%;
+	margin:10px;
+	background:#fff;
+	border:solid 2px #00ADB5;
+	padding:10px;
+	border-radius:5px;
+	widows:10%;
+	color:#00ADB5;
+	font-weight: 600;
+	resize: none;
+}
+.cargar_curso #campo_1{
+	width:95%;
+	margin:10px;
+	background:#fff;
+	border:solid 2px #00ADB5;
+	padding:10px;
+	border-radius:5px;
+	widows:10%;
+	color:#00ADB5;
+	font-weight: 600;
+}
