@@ -34,7 +34,7 @@
             <div class="temas_titulo">
                 <p id="titulo_detalle"><?php echo $rowtema['titu_curso'];?></p>
             </div>
-            <video src="videos_usu/cursos/<?php echo$row['vid_curso']; ?>" id="img_detalle" controls></video><br>
+            <video src="videos_usu/cursos/<?php echo$rowtema['vid_curso']; ?>" id="vid_detalle" controls autoplay></video><br>
             <article class="parrafo">
                 <h2>Contenido del curso</h2>
                 <?php echo $rowtema['cont_curso']; ?>
@@ -56,6 +56,7 @@
             </article>
 
             <a href="participar.php?cod_curso=<?php echo$rowtema['cod_curso'];?>">Comprar</a>
+            <a href="index.php">Atrás</a>
         </div>
     </section>
     <footer>

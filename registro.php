@@ -15,6 +15,7 @@
 		?>
 		<section class="main">
 			<div class="login">
+					<h1>Formulario de registro</h1>
 					<form action="php/registro_usu.php?cod_tema=<?php echo$cod_tema;?>" method="post" autocomplete="off">
 						<input type="text" id="campo_1" name="numero_documento" required placeholder="Numero de documento"><br>
 						<input type="email" id="campo_1" name="email" required placeholder="Email"><br>

@@ -1,3 +1,9 @@
+<?php
+$cod_tema=$_SESSION['cod_tema'];
+$usuario=$_SESSION['u_usuario'];
+$admin = $_SESSION['admin'];
+if (isset($_SESSION['u_usuario'])){
+?>
 <section class="main">
     <div class="cargar_curso">
         <form action="php/publicar_curso.php" method="post" enctype="multipart/form-data">
@@ -57,3 +63,8 @@
 		?>
     </div>
 </section>
+<?php
+ }else{
+ 	header('location:../index.php');
+ }
+?>
