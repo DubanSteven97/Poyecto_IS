@@ -378,6 +378,37 @@ a:hover{
 	margin: 1% 0% 1% 2%;	
 }
 
+
+
+.index{
+	background:#fff;
+	border:solid 1px #fff;
+	width:95%;
+	margin: 0% 0% 0% 0%;
+	position:block;
+	-webkit-box-shadow: 10px 10px 35px 0px black;
+	-moz-box-shadow: 10px 10px 35px 0px black;
+	box-shadow: 10px 10px 35px 0px black;
+	display: inline-block;
+	text-align: left;
+	margin: 0% 0% 1% 2%;	
+}
+
+.index .imagen{
+	margin: 1% 0% 1% 40%;	
+}
+.index .titulo_index{
+	font-size: 150%;
+	font-weight: bold;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	color:#00ADB5;	
+	margin: 0% 0% 0% 2%;
+}
+.index .texto_index{
+	font-size: 130%;
+	margin: 0% 0% 0% 2%;
+}
 .cargar_curso #campo_3{
 	width:37%;
 	margin:10px;

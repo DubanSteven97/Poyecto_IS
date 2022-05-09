@@ -21,7 +21,7 @@
 						<button onclick="cerrar()" id="registro">Registrarse</button>
 						<script type="text/javascript">
 							function cerrar(){
-								window.location="registro.php?cod_tema=0";
+								window.location="registro.php?cod_tema=<?php echo $_REQUEST['cod_curso'];;?>";
 							}
 						</script>						
 			</div>	

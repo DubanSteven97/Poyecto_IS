@@ -1,0 +1,23 @@
+/************************************
+Solucionar problema correo
+************************************/
+
+El mismo problema que tuve usando Gmail y lo resolví descargando el certificado cacert.pem del sitio https://curl.haxx.se/docs/caextract.html También debes escribir el archivo php.ini de la siguiente manera:
+
+extension = php_openssl.dll openssl.cafile = C:\xampp\php\extras\ssl\cacert.pem
+
+Se debe activar en la cuenta de GMail en la etiqueta: Acceso y seguridad de la opción: Permitir acceso a aplicaciones menos seguras opción: ON
+
+Esta solución es gracias a la contribución del usuario de matteobin, de stackoverflow
+
+/************************************
+Ademas agregar
+***********************************/
+
+    $mail->SMTPOptions = array(
+        'ssl' => array(
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
+        )
+    );

@@ -20,7 +20,7 @@
 						<input type="text" id="campo_1" name="numero_documento" required placeholder="Numero de documento"><br>
 						<input type="email" id="campo_1" name="email" required placeholder="Email"><br>
 						<input type="tel" id="campo_1" name="telefono" required placeholder="Telefono"><br>
-						<button type="submit"  id="registro">Registrase</button>
+						<button type="submit"  id="registro">Registrarse</button>
 					</form>	
 			</div>				
 		</section>

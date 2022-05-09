@@ -5,6 +5,14 @@
 	$contrasena = htmlentities(generar_password_complejo(8));
 	$email=$_POST['email'];
 	$telefono=$_POST['telefono'];
+	include("..\PHPMailer\PHPMailer.php");
+	include("..\PHPMailer\SMTP.php");
+	include("..\PHPMailer\Exception.php");
+	
+	use PHPMailer\PHPMailer\PHPMailer;
+	use PHPMailer\PHPMailer\Exception;
+	use PHPMailer\PHPMailer\SMTP;
+	
 	
 	include('conexion.php');
 
@@ -12,18 +20,68 @@
 
 
 	if ($guardar) {
-		mkdir("../imagenes_usu/$documento", 0700);
-		$proceso=$conexion->query("SELECT * FROM ingresar WHERE id_usu='$documento' AND pas_usu='$contrasena'");
-		if ($resultado = mysqli_fetch_array($proceso)) {
-			$_SESSION['u_usuario']=$documento;
-			$_SESSION['cod_tema']=$cod_tema;
-			$_SESSION['admin']= $resultado['admin'];
-			header('location:../publicar.php');
-		}else{
-			echo'<script language="javascript">alert("Usuario o contraseña incorrecta");location.href="../index.php";</script>';
-		}
+		//mkdir("../imagenes_usu/$documento", 0700);
+		$mail = new PHPMailer(true);
+
+		try {
+
+			$mail->isSMTP();
+			$mail->Host       = 'ssl://smtp.gmail.com';
+			$mail->SMTPAuth   = true;
+			$mail->Username   = 'duvan4234@gmail.com';
+			$mail->Password   = 'wrygqzluzvftfhop';  
+			$mail->SMTPOptions = array(
+				'ssl' => array(
+					'verify_peer' => false,
+					'verify_peer_name' => false,
+					'allow_self_signed' => true
+				)
+			);    
+			$mail->Port       = 465;
+
+			//Recipients
+			$mail->setFrom('duvan4234@gmail.com', 'D&D Sofware');
+			$mail->addAddress($email);
+		
+
+
+			//Content
+			$mail->isHTML(true);
+			$mail->Subject = 'Datos de ingreso';
+			$msg = '<table border="0">
+			<thead>
+			<tr>
+				<th colspan="2">D&D Software</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td colspan="2">Bienvenido a D&D Software los datos para el ingreso son:</td>
+			</tr>
+			<tr>
+				<td>Usuario:</td>
+				<td>'.$documento.'</td>
+			</tr>
+			<tr>
+				<td>Contrasena:</td>
+				<td>'.$contrasena.'</td>
+			</tr>
+			<tbody>
+		</table>';			
+			$mail->Body    = $msg;
+	
+
+
+
+			$mail->send();
+			echo'<script language="javascript">alert("Usuario creado correctamente, a su correo se enviara el usuario y contraseña para el ingreso");location.href="../login.php?cod_tema='.$cod_tema.'";</script>';
+
+		} catch (Exception $e) {
+			echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+		}		
+
  	}else{
-		echo'<script language="javascript">alert("El usuario ya existe");location.href="../registro.php?cod_tema=$cod_tema";</script>';
+		echo"<script>alert('El usuario ya existe');location.href ='javascript:history.back()';</script>";
  	}
 
 	 function generar_password_complejo($largo){

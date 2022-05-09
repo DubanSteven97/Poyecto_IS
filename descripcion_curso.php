@@ -55,7 +55,7 @@
 				?>
             </article>
 
-            <a href="participar.php?cod_curso=<?php echo$rowtema['cod_curso'];?>">Comprar</a>
+            <a href="login.php?cod_curso=<?php echo$rowtema['cod_curso'];?>">Comprar</a>
             <a href="index.php">Atrás</a>
         </div>
     </section>

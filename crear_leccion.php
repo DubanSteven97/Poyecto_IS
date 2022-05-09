@@ -42,7 +42,6 @@ if (isset($_SESSION['u_usuario'])){
                 <textarea rows="10" cols="40" id="campo_2" required name="teoria" placeholder="Teoria de la lección"></textarea><br>
                 <textarea rows="10" cols="40" id="campo_2" required name="ejemplo"
                     placeholder="Ejemplo de la lección"></textarea><br>
-                <input type="reset" id="publicar" value="Limpiar todo" />
                 <button type="submit" id="publicar">Crear lección</button>
             </form>
              <a href="publicar.php">Atrás</a>
@@ -73,7 +72,7 @@ if (isset($_SESSION['u_usuario'])){
                     </tr>                  
                     <tr>
                         <td colspan="2" ><video src="videos_usu/lecciones/<?php echo$row['vid_leccion']; ?>" width="400" height="400"
-                                controls style="text-align:center;"></video></td>
+                                controls ></video></td>
                     </tr>
                     <tr>
                         <td id='titu'>Links:</td>

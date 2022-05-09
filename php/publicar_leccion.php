@@ -42,9 +42,7 @@ if (isset($_SESSION['u_usuario'])){
 							if (move_uploaded_file($_FILES['video']['tmp_name'], $video_subida)) {
 								if(is_uploaded_file($_FILES['lectura']['tmp_name'])){
 									if (move_uploaded_file($_FILES['lectura']['tmp_name'], $lectura_subida)) {
-										echo"<script>alert('Lección guardada de forma correcta');location.href ='javascript:history.back()';</script>";
-										/*$url='location:../crear_leccion.php?cod_curso='.$cod_curso;
-										header($url);	*/
+										echo'<script>alert("Lección guardada de forma correcta");location.href ="../crear_leccion.php?cod_curso='.$cod_curso.'";</script>';
 									} else {
 										echo '<script language="javascript">alert("Posible ataque de carga de archivos!\n");location.href="../crear_curso.php";</script>';
 										
