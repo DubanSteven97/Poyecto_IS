@@ -22,7 +22,8 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
-
+create database publicar;
+use publicar;
 --
 -- Estructura de tabla para la tabla `curso`
 --

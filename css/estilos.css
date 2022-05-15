@@ -77,11 +77,20 @@ footer{
     left: 0;
 }
 .parrafo{
-	position:block;
+	float:left;
 	text-align:justify;
-	width:81%;
+	width:40%;
 	margin: 0% 0% 0% 5%;
 	padding:10px;
+	
+}
+
+.parrafo_v2{
+	text-align:justify;
+	width:80%;
+	margin: 0% 0% 1% 5%;
+
+	
 }
 h1{
 	color:#00ADB5;
@@ -269,8 +278,9 @@ a:hover{
 
 .main #vid_detalle{
 	margin: 0px 2% 2% 2%;
-	width:95%;
-	height: 80%;
+	width:40%;
+	height: 35%;
+	float:left;
 }
 
 .main .cursos .temas_titulo #titulo_detalle{

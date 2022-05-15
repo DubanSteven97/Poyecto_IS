@@ -42,6 +42,7 @@ if (isset($_SESSION['u_usuario'])){
                 <textarea rows="10" cols="40" id="campo_2" required name="teoria" placeholder="Teoria de la lección"></textarea><br>
                 <textarea rows="10" cols="40" id="campo_2" required name="ejemplo"
                     placeholder="Ejemplo de la lección"></textarea><br>
+                <input type="number" id="campo_1" name="horas_curso" required placeholder="Horas de la lección" ><br>
                 <button type="submit" id="publicar">Crear lección</button>
             </form>
              <a href="publicar.php">Atrás</a>

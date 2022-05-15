@@ -1,4 +1,8 @@
 <html>
+	<?php 
+		$comprar=$_REQUEST['comprar'];
+		$cod_curso=$_REQUEST['cod_curso'];
+	?>	
 	<head>
 		<meta charset="utf-8">
 		<title>Software</title>
@@ -10,16 +14,13 @@
 			<h2 class='titulo'>Software</h2>
 		</div>
 		</header>
-		<?php
-			$cod_tema=$_REQUEST['cod_tema'];
-		?>
 		<section class="main">
 			<div class="login">
 					<h1>Formulario de registro</h1>
-					<form action="php/registro_usu.php?cod_tema=<?php echo$cod_tema;?>" method="post" autocomplete="off">
-						<input type="text" id="campo_1" name="numero_documento" required placeholder="Numero de documento"><br>
+					<form action="php/registro_usu.php?cod_curso=<?php echo$cod_curso;?>&comprar=<?php echo $comprar;?>" method="post" autocomplete="off">
+						<input type="text" id="campo_1" name="numero_documento" required placeholder="Número de documento"><br>
 						<input type="email" id="campo_1" name="email" required placeholder="Email"><br>
-						<input type="tel" id="campo_1" name="telefono" required placeholder="Telefono"><br>
+						<input type="tel" id="campo_1" name="telefono" required placeholder="Teléfono"><br>
 						<button type="submit"  id="registro">Registrarse</button>
 					</form>	
 			</div>				

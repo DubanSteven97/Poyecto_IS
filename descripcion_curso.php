@@ -15,7 +15,7 @@
             <button onclick="cerrar()" id="btn-2">Ingresar</button>
             <script type="text/javascript">
             function cerrar() {
-                window.location = "login.php?cod_curso=0";
+                window.location = "login.php?cod_curso=0&comprar=false";
             }
             </script>
         </div>
@@ -26,7 +26,10 @@
 				$cod_curso=$_REQUEST['cod_curso'];
 				$tema="SELECT * FROM curso where cod_curso=$cod_curso";
 				$lecciones="SELECT * FROM leccion where cod_curso=$cod_curso";
+                $horas="SELECT SUM(horas_leccion) AS horas FROM leccion where cod_curso=$cod_curso";
 				$resultadostema=$conexion->query($tema);
+                $resultadoshoras=$conexion->query($horas);
+                $rowhoras=$resultadoshoras -> fetch_assoc();
 				$rowtema=$resultadostema -> fetch_assoc();	
 				$resultadosLecciones=$conexion->query($lecciones);
 		?>
@@ -34,7 +37,7 @@
             <div class="temas_titulo">
                 <p id="titulo_detalle"><?php echo $rowtema['titu_curso'];?></p>
             </div>
-            <video src="videos_usu/cursos/<?php echo$rowtema['vid_curso']; ?>" id="vid_detalle" controls autoplay></video><br>
+            <video src="videos_usu/cursos/<?php echo$rowtema['vid_curso']; ?>" id="vid_detalle" controls autoplay></video>
             <article class="parrafo">
                 <h2>Contenido del curso</h2>
                 <?php echo $rowtema['cont_curso']; ?>
@@ -43,6 +46,14 @@
                 <h2>Caractareristicas del curso</h2>
                 <?php echo $rowtema['carac_curso']; ?>
             </article>
+            <article class="parrafo">
+                <h2>Valor del curso</h2>
+                <?php echo "$ ".$rowtema['costo_curso']; ?>
+            </article>    
+            <article class="parrafo">
+                <h2>Horas del curso</h2>
+                <?php echo $rowhoras['horas']." h"; ?>
+            </article>                       
             <article class="parrafo">
                 <h2>Lecciones</h2><br>
                 <?php 		
@@ -54,8 +65,21 @@
 					} 
 				?>
             </article>
-
-            <a href="login.php?cod_curso=<?php echo$rowtema['cod_curso'];?>">Comprar</a>
+            <article class="parrafo_v2">
+                <h2>Datos del docente</h2>
+            </article>    
+            <article class="parrafo_v2">
+                <img src="imagenes_usu/profesores/<?php  echo $rowtema['img_profesor'];?>" id="img">
+            </article>                      
+            <article class="parrafo_v2">
+                <h2>Nombre</h2>
+                <?php echo $rowtema['nombre_profesor']; ?>
+            </article> 
+            <article class="parrafo_v2">
+                <h2>Descripción</h2>
+                <?php echo $rowtema['descripcion_profesor']; ?>
+            </article>                         
+            <a href="login.php?cod_curso=<?php echo$rowtema['cod_curso'];?>&comprar=true">Comprar</a>
             <a href="index.php">Atrás</a>
         </div>
     </section>

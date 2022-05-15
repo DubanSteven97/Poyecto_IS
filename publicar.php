@@ -2,6 +2,7 @@
 session_start();
 $cod_tema=$_SESSION['cod_tema'];
 $admin = $_SESSION['admin'];
+$compra = $_SESSION['compra'];
 if (isset($_SESSION['u_usuario'])){
 ?>
 <!DOCTYPE html>
@@ -24,11 +25,12 @@ if (isset($_SESSION['u_usuario'])){
 		</div>
 		</header>
 		<?php
-			if($admin=="0"){
+			if($admin=="0" && $compra=="false"){			
 				include('ejecutar_curso.php');
-			}else{
-				
+			}elseif($admin=="1" && $compra=="false"){			
 				include('crear_curso.php');
+			}elseif($admin=="0" && $compra=="true"){			
+				include('comprar.php');
 			}
 		?>
 

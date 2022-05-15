@@ -1,6 +1,7 @@
 <?php	
 	session_start();
-	$cod_tema=$_REQUEST['cod_tema'];
+	$cod_curso=$_REQUEST['cod_curso'];
+	$comprar=$_REQUEST['comprar'];
 	$documento=htmlentities($_POST['numero_documento']);
 	$contrasena = htmlentities(generar_password_complejo(8));
 	$email=$_POST['email'];
@@ -74,7 +75,7 @@
 
 
 			$mail->send();
-			echo'<script language="javascript">alert("Usuario creado correctamente, a su correo se enviara el usuario y contraseña para el ingreso");location.href="../login.php?cod_tema='.$cod_tema.'";</script>';
+			echo'<script language="javascript">alert("Usuario creado correctamente, a su correo se enviara el usuario y contraseña para el ingreso");location.href="../login.php?cod_curso='.$cod_curso.'&comprar='.$comprar.'";</script>';
 
 		} catch (Exception $e) {
 			echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";

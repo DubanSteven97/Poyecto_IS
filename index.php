@@ -15,7 +15,7 @@
             <button onclick="cerrar()" id="btn-2">Ingresar</button>
             <script type="text/javascript">
             function cerrar() {
-                window.location = "login.php?cod_tema=0";
+                window.location = "login.php?cod_curso=0&comprar=false";
             }
             </script>
         </div>
