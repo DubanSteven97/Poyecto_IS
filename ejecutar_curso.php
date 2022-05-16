@@ -50,12 +50,12 @@
           
                 if ($ultima_progreso == $ultima){
             ?>
-                <h2>Curso Finalizado</h2>
+                <p style="color:#00ADB5; text-align: center;	margin: 5px 0px 0% 1%; font-size:150%;font-weight: bold;">Curso Finalizado</p>
                 
             <?php 
             }else{
             ?>
-                <a href="ejecutar_leccion.php?cod_leccion=<?php echo proxima_leccion($rowtema['cod_curso'],$cod_usuario);?>&cod_curso=<?php echo $rowtema['cod_curso'];?>">Ejecutar curso</a>
+                <a href="ejecutar_leccion.php?cod_leccion=<?php echo proxima_leccion($rowtema['cod_curso'],$cod_usuario);?>&cod_curso=<?php echo $rowtema['cod_curso'];?>">Continuar curso</a>
             <?php 
             }
             ?>  

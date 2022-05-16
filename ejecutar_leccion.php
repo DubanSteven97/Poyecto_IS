@@ -56,6 +56,7 @@
             </article>                                             
             <a href="recursos_usu/material/<?php echo$rowtema['apoyo_leccion']; ?>" download="<?php echo$rowtema['apoyo_leccion']; ?>">Materia de apoyo</a>
             <a href="recursos_usu/lectura/<?php echo$rowtema['lectura_leccion']; ?>" download="<?php echo$rowtema['lectura_leccion']; ?>">Lecturas de la lección</a>
+            <a href="publicar.php">Salir del curso</a>
             <?php 
                 $ultima_leccion=$conexion->query("SELECT MAX(cod_leccion) codigo FROM leccion where cod_curso=$cod_curso");
                 $row=$ultima_leccion-> fetch_assoc();

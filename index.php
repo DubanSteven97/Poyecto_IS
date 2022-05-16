@@ -74,7 +74,7 @@
                 <h1><?php echo $rowtema['titu_curso']; ?></h1>
             </div>
             <img src="imagenes_usu/cursos/<?php  echo $rowtema['img_curso'];?>" id="img"><br>
-            <article class="parrafo">
+            <article style="float:left; text-align:justify; width:80%;margin: 0% 0% 0% 5%; padding:10px;">
                 <?php echo $rowtema['cont_curso']; ?>
             </article>
             <a href="descripcion_curso.php?cod_curso=<?php echo$rowtema['cod_curso'];?>">Ver más</a>
