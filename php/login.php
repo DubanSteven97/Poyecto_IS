@@ -17,6 +17,6 @@
 			$_SESSION['compra']= $curso;
 			header('location:../publicar.php');
 		}else{
-		echo'<script language="javascript">alert("Usuario o contraseña incorrecta");location.href="../index.php";</script>';
+			echo"<script>alert('Usuario o contraseña incorrecta');location.href ='javascript:history.back()';</script>";
 		}
 ?>
