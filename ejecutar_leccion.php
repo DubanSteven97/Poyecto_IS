@@ -37,26 +37,26 @@
             <div class="temas_titulo">
                 <p id="titulo_detalle"><?php echo $rowtema['titu_leccion'];?></p>
             </div>
-            <video src="videos_usu/lecciones/<?php echo$rowtema['vid_leccion']; ?>" id="vid_detalle" controls autoplay></video>
             <article class="parrafo">
                 <h2>Objetivo de la lección</h2>
                 <?php echo $rowtema['objetivo_leccion']; ?>
-            </article> 
-            <article class="parrafo">
-                <h2>Links de apoyo</h2>
-                <?php echo $rowtema['links_leccion']; ?>
-            </article>  
+            </article>             
             <article class="parrafo">
                 <h2>Teoria</h2>
                 <?php echo $rowtema['teoria_leccion']; ?>
-            </article>   
-            <article class="parrafo">
+            </article>             
+            <video src="videos_usu/lecciones/<?php echo$rowtema['vid_leccion']; ?>" id="vid_detalle" controls autoplay></video>
+            <article class="parrafo_v3">
+                <h2>Links de apoyo</h2>
+                <?php echo $rowtema['links_leccion']; ?>
+            </article>  
+            <article class="parrafo_v3">
                 <h2>Ejemplo</h2>
                 <?php echo $rowtema['ejemplo_leccion']; ?>
             </article>                                             
             <a href="recursos_usu/material/<?php echo$rowtema['apoyo_leccion']; ?>" download="<?php echo$rowtema['apoyo_leccion']; ?>">Materia de apoyo</a>
             <a href="recursos_usu/lectura/<?php echo$rowtema['lectura_leccion']; ?>" download="<?php echo$rowtema['lectura_leccion']; ?>">Lecturas de la lección</a>
-            <a href="publicar.php">Salir del curso</a>
+            
             <?php 
                 $ultima_leccion=$conexion->query("SELECT MAX(cod_leccion) codigo FROM leccion where cod_curso=$cod_curso");
                 $row=$ultima_leccion-> fetch_assoc();
@@ -70,7 +70,8 @@
                 <a href="php/Siguiente_leccion.php?cod_curso=<?php echo$rowtema['cod_curso'];?>&cod_leccion=<?php echo$cod_leccion;?>">Siguiente</a>
             <?php 
             }
-            ?>            
+            ?> 
+            <a href="publicar.php">Salir del curso</a>           
         </div>
     </section>
 </body>

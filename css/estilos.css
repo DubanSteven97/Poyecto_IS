@@ -77,6 +77,22 @@ footer{
     left: 0;
 }
 .parrafo{
+	/*float:left;*/
+	text-align:justify;
+	width:90%;
+	margin: 0% 0% 0% 5%;
+	padding:10px;
+	
+}
+.parrafo_v4{
+	/*float:left;*/
+	text-align:justify;
+	width:40%;
+	margin: 0% 0% 0% 5%;
+	padding:10px;
+	
+}
+.parrafo_v3{
 	float:left;
 	text-align:justify;
 	width:40%;
@@ -84,7 +100,6 @@ footer{
 	padding:10px;
 	
 }
-
 .parrafo_v2{
 	text-align:justify;
 	width:80%;
@@ -143,13 +158,14 @@ h1{
 }
 
 #publicar{
-	width:94%;
+	width:30%;
 	background: #00ADB5;
 	border:none;
 	border-radius: 5px;
 	padding: 10px;
 	color: #fff;
 	margin:0% 0% 1% 2%;
+	float:left;
 }
 
 .main .temas{
@@ -239,7 +255,7 @@ h1{
 }
 
 a{
-	width:93%;
+	width:40%;
 	text-align:justify;
 	margin-right:1%;
 	background: #00ADB5;
@@ -250,8 +266,9 @@ a{
 	display: block;
 	text-decoration:none;
 	margin: 0% 0% 1% 2%;
-	display: inline-block;
 	text-align: center;	
+	display: inline-block;
+	float:none;
 }
 a:hover{
 	text-align:center;
@@ -260,7 +277,8 @@ a:hover{
 	border:solid 2px #00ADB5;
 	display: block;
 	display: inline-block;
-	text-align: center;			
+	text-align: center;	
+	float:none;		
 }
 
 .main .cursos{

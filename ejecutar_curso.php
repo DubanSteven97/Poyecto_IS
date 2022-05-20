@@ -59,11 +59,46 @@
             <?php 
             }
             ?>  
-        </div>
-
+        <?php
+				$cod_curso=$rowtema['cod_curso'];
+				$tema="SELECT * FROM curso where cod_curso=$cod_curso";
+                $capitulos="SELECT * FROM capitulo where cod_curso=$cod_curso";
+                $horas="SELECT SUM(horas_leccion) AS horas FROM leccion where cod_curso=$cod_curso";
+				$resultadostema=$conexion->query($tema);
+                $resultadoshoras=$conexion->query($horas);
+                $rowhoras=$resultadoshoras -> fetch_assoc();
+				$rowtema=$resultadostema -> fetch_assoc();	
+                $resultadoscapitulos=$conexion->query($capitulos);
+		?>        
+        <article class="parrafo">
+                <h2>Componentes</h2><br>
+                <?php 		
+					while ($rowcapitulos=$resultadoscapitulos -> fetch_assoc()){				
+				?>
+                <div>
+    			 <p><b><?php echo $rowcapitulos['titu_capitulo']; ?></b></p><br>
+                 <ul  style="margin: 0px 0px 0% 10%">
+                 <?php 	
+                    $cod_capitulo=$rowcapitulos['cod_capitulo'];
+                    $lecciones="SELECT * FROM leccion where cod_curso=$cod_curso and cod_capitulo =$cod_capitulo ";
+                    $resultadosLecciones=$conexion->query($lecciones);
+					while ($rowlecciones=$resultadosLecciones -> fetch_assoc()){				
+				?>                 
+                    <li><?php echo $rowlecciones['titu_leccion']; ?></li>
+                <?php 
+					} echo "<br>";
+				?>
+                </ul>
+                <div>
+				<?php 
+					} 
+				?>
+            </article>
         <?php 
 	        }
-	?>
+	?>            
+        </div>
+
 </section>
 <?php
  }else{

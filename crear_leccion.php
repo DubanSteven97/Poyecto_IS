@@ -4,6 +4,7 @@ $cod_tema=$_SESSION['cod_tema'];
 $cod_curso=$_REQUEST['cod_curso'];
 $usuario=$_SESSION['u_usuario'];
 $admin = $_SESSION['admin'];
+$cod_capitulo=$_REQUEST['cod_capitulo'];
 if (isset($_SESSION['u_usuario'])){
 ?>
 <!DOCTYPE html>
@@ -29,7 +30,8 @@ if (isset($_SESSION['u_usuario'])){
     </header>
     <section class="main">
         <div class="cargar_curso">
-            <form action="php/publicar_leccion.php?cod_curso=<?php echo $cod_curso;?>" method="post" enctype="multipart/form-data">
+        <h1>Creación de lecciones</h1>
+            <form action="php/publicar_leccion.php?cod_curso=<?php echo $cod_curso;?>&cod_capitulo=<?php echo $cod_capitulo;?>" method="post" enctype="multipart/form-data">
                 <input type="text" name="titulo_leccion" id="campo_1"  required placeholder="Titulo lección"><br>
                 <input type="text" name="objetivo_leccion" id="campo_1" required placeholder="Objetivo lección"><br>
                 <label for="video" id="campo_3">Video lección:</label>
@@ -45,7 +47,7 @@ if (isset($_SESSION['u_usuario'])){
                 <input type="number" id="campo_1" name="horas_curso" required placeholder="Horas de la lección" ><br>
                 <button type="submit" id="publicar">Crear lección</button>
             </form>
-             <a href="publicar.php">Atrás</a>
+             <a href="crear_capitulo.php?cod_curso=<?php echo $cod_curso?>">Atrás</a>
         </div>
         <div>
             <?php
@@ -54,7 +56,7 @@ if (isset($_SESSION['u_usuario'])){
                 $usuario_consultar=$conexion->query("select * from ingresar where id_usu='$usuario'");
                 $row=$usuario_consultar-> fetch_assoc();
                 $cod_usuario=$row['cod_usu'];
-                $mostrar="SELECT * FROM leccion where cod_usu = $cod_usuario and cod_curso = $cod_curso";
+                $mostrar="SELECT * FROM leccion where cod_usu = $cod_usuario and cod_curso = $cod_curso and cod_capitulo=$cod_capitulo";
                 $resultados=$conexion->query($mostrar);
             while ($row=$resultados -> fetch_assoc()){
 		?>

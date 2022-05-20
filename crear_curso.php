@@ -6,6 +6,7 @@ if (isset($_SESSION['u_usuario'])){
 ?>
 <section class="main">
     <div class="cargar_curso">
+    <h1>Creación de cursos</h1>
         <form action="php/publicar_curso.php" method="post" enctype="multipart/form-data">
             <input type="text" id="campo_1" name="titulo_curso" required placeholder="Titulo curso" ><br>
             <textarea rows="10" cols="40" id="campo_2" required name="contenido_curso" placeholder="Contenido curso"></textarea><br>
@@ -58,8 +59,8 @@ if (isset($_SESSION['u_usuario'])){
                 </tr>
                 <tr>
                     <td colspan="2"><a
-                            href="crear_leccion.php?cod_curso=<?php echo$row['cod_curso'];?>&cod_usu=<?php echo$row['cod_usu'];?>">Agregar
-                            lección</a>
+                            href="crear_capitulo.php?cod_curso=<?php echo$row['cod_curso'];?>&cod_usu=<?php echo$row['cod_usu'];?>">Agregar
+                            capítulo</a>
                     </td>
                 </tr>
             </table>
