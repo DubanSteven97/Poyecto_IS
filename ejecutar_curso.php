@@ -55,7 +55,7 @@
             <?php 
             }else{
             ?>
-                <a href="ejecutar_leccion.php?cod_leccion=<?php echo proxima_leccion($rowtema['cod_curso'],$cod_usuario);?>&cod_curso=<?php echo $rowtema['cod_curso'];?>">Continuar curso</a>
+                <a href="ejecutar_leccion.php?cod_leccion=<?php echo proxima_leccion($rowtema['cod_curso'],$cod_usuario);?>&cod_curso=<?php echo $rowtema['cod_curso'];?>&respuesta=false&primera=0">Continuar curso</a>
             <?php 
             }
             ?>  

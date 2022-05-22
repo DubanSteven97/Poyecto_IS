@@ -11,6 +11,11 @@ if (isset($_SESSION['u_usuario'])){
 	$links_leccion=$_POST['links'];
 	$teoria_leccion=$_POST['teoria'];
 	$ejemplo_leccion=$_POST['ejemplo'];	
+	$pregunta=$_POST['pregunta'];
+	$correcta=$_POST['respuesta_correcta'];	
+	$incorrecta_1=$_POST['respuesta_incorrecta_1'];	
+	$incorrecta_2=$_POST['respuesta_incorrecta_2'];	
+	$incorrecta_3=$_POST['respuesta_incorrecta_3'];	
 	$cod_curso=$_REQUEST['cod_curso'];
 	$cod_capitulo=$_REQUEST['cod_capitulo'];
 	$usuario=$_SESSION['u_usuario'];
@@ -28,7 +33,7 @@ if (isset($_SESSION['u_usuario'])){
 	$cod_usuario=$row['cod_usu'];
 
 
-	$guardar=$conexion->query("insert into leccion(titu_leccion	,objetivo_leccion,vid_leccion,apoyo_leccion,lectura_leccion,links_leccion,teoria_leccion,ejemplo_leccion,fec_leccion,cod_curso,cod_usu,	cod_capitulo,horas_leccion) values ('$titulo_leccion','$objetivo_leccion','$nom_video','$nom_material','$nom_lectura','$links_leccion','$teoria_leccion','$ejemplo_leccion',NOW(),'$cod_curso','$cod_usuario','$cod_capitulo','$horas_leccion')");
+	$guardar=$conexion->query("insert into leccion(titu_leccion	,objetivo_leccion,vid_leccion,apoyo_leccion,lectura_leccion,links_leccion,teoria_leccion,ejemplo_leccion,fec_leccion,cod_curso,cod_usu,	cod_capitulo,horas_leccion,pregunta,correcta,incorrecta_1,incorrecta_2,incorrecta_3) values ('$titulo_leccion','$objetivo_leccion','$nom_video','$nom_material','$nom_lectura','$links_leccion','$teoria_leccion','$ejemplo_leccion',NOW(),'$cod_curso','$cod_usuario','$cod_capitulo','$horas_leccion','$pregunta','$correcta','$incorrecta_1','$incorrecta_2','$incorrecta_3')");
 
 
 	if ($guardar) {

@@ -45,6 +45,12 @@ if (isset($_SESSION['u_usuario'])){
                 <textarea rows="10" cols="40" id="campo_2" required name="ejemplo"
                     placeholder="Ejemplo de la lección"></textarea><br>
                 <input type="number" id="campo_1" name="horas_curso" required placeholder="Horas de la lección" ><br>
+                <h2 style="margin: 0px 0px 0% 1%">Pregunta</h2>
+                <input type="text" name="pregunta" id="campo_1"  required placeholder="Ingrese pregunta"><br>
+                <input type="text" name="respuesta_correcta" id="campo_1"  required placeholder="Ingrese respuesta correcta"><br>
+                <input type="text" name="respuesta_incorrecta_1" id="campo_1"  required placeholder="Ingrese respuesta incorrecta"><br>
+                <input type="text" name="respuesta_incorrecta_2" id="campo_1"  required placeholder="Ingrese respuesta incorrecta"><br>
+                <input type="text" name="respuesta_incorrecta_3" id="campo_1"  required placeholder="Ingrese respuesta incorrecta"><br>
                 <button type="submit" id="publicar">Crear lección</button>
             </form>
              <a href="crear_capitulo.php?cod_curso=<?php echo $cod_curso?>">Atrás</a>

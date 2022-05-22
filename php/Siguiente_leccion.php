@@ -15,8 +15,7 @@
 
 	if ($guardar) {
 		$prox=proxima_leccion($cod_curso,$cod_usuario);
-		echo'<script language="javascript">alert("Leccion aprobada");location.href="../ejecutar_leccion.php?cod_leccion='.$prox.'&cod_curso='.$cod_curso.'";</script>';
-
+		echo'<script language="javascript">location.href="../ejecutar_leccion.php?cod_leccion='.$prox.'&cod_curso='.$cod_curso.'&respuesta=false&primera=0";</script>';
  	}else{
 		echo"<script>alert('Leccion reprobada');location.href ='javascript:history.back()';</script>";
  	} 
